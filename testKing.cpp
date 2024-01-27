@@ -3,8 +3,8 @@
  *    King Test : Unit tests for King
  ************************************************************************/
 
-#include "testKing.h" // for PIECE_TEST
-#include "king.h"     // for PIECE
+#include "testKing.h" // for KING_TEST
+#include "king.h"     // for KING
 #include <cassert>        // for ASSERT
 
 void KingTest::getMoves_free(){
