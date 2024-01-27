@@ -15,12 +15,12 @@ void PawnTest::getMoves_blocked()
 
 	//white pawn d4, black pawn d5 
 	Pawn pawn;
-	pawn.ifWhite = true;
+	pawn.fWhite = true;
 	pawn.position = "27"; // d4
 	board.assign(pawn);
 	
 	Pawn pawn2;
-	pawn2.ifWhite = false;
+	pawn2.fWhite = false;
 	pawn.position = "35"; //d5 
 	board.assign(pawn2);
 
@@ -41,7 +41,7 @@ void PawnTest::getMoves_simple()
 
 	//white pawn b4
 	Pawn pawn;
-	pawn.ifWhite = true;
+	pawn.fWhite = true;
 	pawn.position = "25"; //b4
 	board.assign(pawn);
 
@@ -62,7 +62,7 @@ void PawnTest::getMoves_initial()
 
 	//white pawn b2
 	Pawn pawn;
-	pawn.ifWhite = true;
+	pawn.fWhite = true;
 	pawn.position = "9"; //b2
 	board.assign(pawn);
 
@@ -83,23 +83,23 @@ void PawnTest::getMoves_capture()
 
 	//white pawn b6
 	Pawn pawn;
-	pawn.ifWhite = true;
+	pawn.fWhite = true;
 	pawn.position = "41"; //b6
 	board.assign(pawn);
 
 	//black pawn a7, b7, c7
 	Pawn pawn2;
-	pawn2.ifWhite = false;
+	pawn2.fWhite = false;
 	pawn2.position = "48"; //a7
 	board.assign(pawn2);
 
 	Pawn pawn3;
-	pawn3.ifWhite = false;
+	pawn3.fWhite = false;
 	pawn3.position = "49"; //b7
 	board.assign(pawn3);
 
 	Pawn pawn4;
-	pawn4.ifWhite = false;
+	pawn4.fWhite = false;
 	pawn4.position = "50"; //c7
 	board.assign(pawn4);
 
@@ -120,25 +120,25 @@ void PawnTest::getMoves_enpassant()
 
 	//white pawn b5
 	Pawn pawn;
-	pawn.ifWhite = true;
+	pawn.fWhite = true;
 	pawn.position = "33"; //b5
 	board.assign(pawn);
 	
 	//black pawn b6
 	Pawn pawn2;
-	pawn2.ifWhite = false;
+	pawn2.fWhite = false;
 	pawn2.position = "41"; //b6
 	board.assign(pawn2);
 
 	//black pawn a6, c6 lastmove = 1 
 	Pawn pawn3;
-	pawn3.ifWhite = false;
+	pawn3.fWhite = false;
 	pawn3.position = "40"; // a6
 	pawn3.lastMove = 1;
 	board.assign(pawn3);
 
 	Pawn pawn4;
-	pawn4.ifWhite = false;
+	pawn4.fWhite = false;
 	pawn4.position = "42"; // c6
 	pawn4.lastMove = 1;
 	board.assign(pawn4);
@@ -160,7 +160,7 @@ void PawnTest::getMoves_promotion()
 
 	//white pawn b7
 	Pawn pawn;
-	pawn.ifWhite = true;
+	pawn.fWhite = true;
 	pawn.position = "49"; //b7
 	board.assign(pawn);
 
