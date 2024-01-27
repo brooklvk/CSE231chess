@@ -13,17 +13,20 @@ class PawnTest
 {
 public:
     void run()
-    {
-        // Constructor 
-        constructor_default();
-
-        //ex. funcName_case();
-
+    { 
+        getMoves_blocked();
+        getMoves_simple();
+        getMoves_initial();
+        getMoves_capture();
+        getMoves_enpassant();
+        getMoves_promotion();
     }
 
 private:
-    void constructor_default();
-
-    //ex. void funcName_case();
-
+    void getMoves_blocked();
+    void getMoves_simple();
+    void getMoves_initial();
+    void getMoves_capture();
+    void getMoves_enpassant();
+    void getMoves_promotion();
 }
