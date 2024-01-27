@@ -9,5 +9,5 @@
 
 
 
-// Include testMove, testPosition, testPiece, testPawn in this test runner 
+// Include testMove, testPosition, testKing, testPawn in this test runner 
 

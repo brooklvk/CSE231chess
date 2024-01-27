@@ -1,17 +1,17 @@
 /***********************************************************************
  * Source File:
- *    Piece Test : Unit tests for Piece
+ *    King Test : Unit tests for King
  ************************************************************************/
 
-#include "testPiece.h" // for PIECE_TEST
-#include "piece.h"     // for PIECE
+#include "testKing.h" // for PIECE_TEST
+#include "king.h"     // for PIECE
 #include <cassert>        // for ASSERT
 
-void PieceTest::constructor_default()
+void KingTest::constructor_default()
 {
 	//SETUP
 	//EXERCISE
-	Piece pieceTest;
+	King kingTest;
 
 	//VERIFY
 	//asserts
@@ -19,5 +19,14 @@ void PieceTest::constructor_default()
 	//TEARDOWN
 }
 
-//next function from testPiece.h 
+//next function from testKing.h 
+void KingTest::
+{
+	//SETUP
+	//EXERCISE
+	
+	//VERIFY
+
+	//TEARDOWN
+}
 

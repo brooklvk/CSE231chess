@@ -1,15 +1,15 @@
 /***********************************************************************
  * Header File:
- *    Unit tests for Piece 
+ *    Unit tests for King
  ************************************************************************/
 
 #pragma once
 
  /***************************************************
-  * PIECE TEST
-  * Test the Piece class
+  * KING TEST
+  * Test the King class
   ***************************************************/
-class PieceTest
+class KingTest
 {
 public:
     void run()
