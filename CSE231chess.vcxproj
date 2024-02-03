@@ -49,6 +49,8 @@
     <ClInclude Include="..\code\testRunner.h" />
     <ClInclude Include="..\code\uiDraw.h" />
     <ClInclude Include="..\code\uiInteract.h" />
+    <ClInclude Include="..\code\piece.h" />
+    <ClInclude Include="piece.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\code\README.md" />
