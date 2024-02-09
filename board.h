@@ -1,40 +1,62 @@
-/***********************************************************************
- * Header File:
- *    BOARD: Keep track of the board 
- ************************************************************************/
 
 #pragma once
 
-#include <set>
-//#include "position.h"      include any class that is an attribute 
-//#include "pieceType.h"     A piece type
+#include "position.h"   // for POSITION: how we locate pieces
+#include "move.h"       // for MOVE: how we move pieces around
+#include "piece.h"      // for PIECE: what the board consists of
 
-// class MoveTest;     include test classes 
+// Forward declarations
 
-/***************************************************
- * BOARD 
- ***************************************************/
+class Move;
+
 class Board
 {
 public:
-    // friend MoveTest;     if needs a test class 
 
-    Board() {
-        char board[64] = { 
-                'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r',
-                'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p',
-                ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-                ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-                ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-                ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-                'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P',
-                'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'
-            };
+    // Test suites with private access
+    friend class testBoard;
+
+    // Constructor & Destructor
+    Board(ogstream* pgout, bool noReset = false) : currentMove(-1), pgout(pgout)
+    {
+        if (!noReset)
+            reset(false /*fFree*/);
+    }
+    ~Board()
+    {
+        free();
     }
 
-    // getBoard() return board 
+    // Accessors
+    int getCurrentMove() const { return currentMove; }
+    bool isWhiteTurn()   const { return currentMove % 2 == 0; }
+    void display(const Position& posHover, const Position& posSelect) const;
+    const Piece& operator [] (const Position& pos) const
+    {
+        return *board[pos.getRow()][pos.getCol()];
+    }
 
-private:
-    // array of 64 chars 
+    // Mutators
+    void free();
+    virtual void reset(bool fFree = true);
+    void testBoard(bool fFree = true);
+    void assign(const Piece& piece, const Position& pos);
+    void move(const Move& move);
+    void operator -= (const Position& pos);
+    void operator -= (const Move& move);
+    void remove(const Position& pos);
+    const Piece* operator = (Piece* rhs);
+    Piece& operator [] (const Position& pos)
+    {
+        return *board[pos.getRow()][pos.getCol()];
+    }
+    void swap(const Position& pos1, const Position& pos2);
+    void setCurrentMove(int currentMove) { this->currentMove = currentMove; }
 
+protected:
+    void assertBoard();
+
+    Piece* board[8][8];      // The chess board of pieces
+    int currentMove;          // The current move number we are on
+    ogstream* pgout;         // The interface
 };

@@ -10,4 +10,4 @@ class RunTest
 {
 public:
     void run() {};
-}
+};

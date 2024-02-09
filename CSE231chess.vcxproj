@@ -100,8 +100,8 @@
   <ItemGroup>
     <ClCompile Include="board.cpp" />
     <ClCompile Include="chess-OLD.cpp" />
-    <ClCompile Include="chess.cpp" />
     <ClCompile Include="king.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="move.cpp" />
     <ClCompile Include="pawn.cpp" />
     <ClCompile Include="position.cpp" />

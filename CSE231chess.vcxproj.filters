@@ -27,46 +27,40 @@
     <ClCompile Include="piece.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\board.cpp">
+    <ClCompile Include="board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\chess.cpp">
+    <ClCompile Include="chess-OLD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\chess-OLD.cpp">
+    <ClCompile Include="king.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\king.cpp">
+    <ClCompile Include="move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\move.cpp">
+    <ClCompile Include="pawn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\pawn.cpp">
+    <ClCompile Include="position.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\position.cpp">
+    <ClCompile Include="testKing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\testKing.cpp">
+    <ClCompile Include="testMove.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\testMove.cpp">
+    <ClCompile Include="testPawn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\testPawn.cpp">
+    <ClCompile Include="testPosition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\testPosition.cpp">
+    <ClCompile Include="testRunner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\code\testRunner.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\code\uiDraw.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\code\uiInteract.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,52 +74,46 @@
     <ClInclude Include="piece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\board.h">
+    <ClInclude Include="board.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\king.h">
+    <ClInclude Include="king.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\move.h">
+    <ClInclude Include="move.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\pawn.h">
+    <ClInclude Include="pawn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\pieceType.h">
+    <ClInclude Include="pieceType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\point-OLD.h">
+    <ClInclude Include="point-OLD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\position.h">
+    <ClInclude Include="position.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\testKing.h">
+    <ClInclude Include="testKing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\testMove.h">
+    <ClInclude Include="testMove.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\testPawn.h">
+    <ClInclude Include="testPawn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\testPosition.h">
+    <ClInclude Include="testPosition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\code\testRunner.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\code\uiDraw.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\code\uiInteract.h">
+    <ClInclude Include="testRunner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="..\code\README.md" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="enPassant.txt">
