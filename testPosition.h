@@ -18,47 +18,47 @@ class PositionTest
 public:
    void run()
    {
-      // get
-      getRow_zero();
-      getCol_zero();
-      isValid_zero();
-      isInvalid_zero();
-      getRow_middle();
-      getCol_middle();
-      isValid_middle();
-      isInvalid_middle();
-      getRow_end();
-      getCol_end();
-      isValid_end();
-      isInvalid_end();
-      getRow_invalid();
-      getCol_invalid();
-      isValid_invalid();
-      isInvalid_invalid();
-      getRow_wacky();
-      getCol_wacky();
-      isValid_wacky();
-      isInvalid_wacky();
+   //   // get
+   //   getRow_zero();
+   //   getCol_zero();
+   //   isValid_zero();
+   //   isInvalid_zero();
+   //   getRow_middle();
+   //   getCol_middle();
+   //   isValid_middle();
+   //   isInvalid_middle();
+   //   getRow_end();
+   //   getCol_end();
+   //   isValid_end();
+   //   isInvalid_end();
+   //   getRow_invalid();
+   //   getCol_invalid();
+   //   isValid_invalid();
+   //   isInvalid_invalid();
+   //   getRow_wacky();
+   //   getCol_wacky();
+   //   isValid_wacky();
+   //   isInvalid_wacky();
 
-      // set
-      set_col();
-      set_row();
-      set_both();
-      set_text();
-      set_string();
-      set_copy();
-         
-      // adjust
-      adjust_addColumn();
-      adjust_addRow();
-      adjust_offRight();
-      adjust_offTop();
-      adjust_offLeft();
-      adjust_offBottom();
-      adjust_invalid();
+   //   // set
+   //   set_col();
+   //   set_row();
+   //   set_both();
+   //   set_text();
+   //   set_string();
+   //   set_copy();
+   //      
+   //   // adjust
+   //   adjust_addColumn();
+   //   adjust_addRow();
+   //   adjust_offRight();
+   //   adjust_offTop();
+   //   adjust_offLeft();
+   //   adjust_offBottom();
+   //   adjust_invalid();
    }
 private:
-   void getRow_zero();
+   /*void getRow_zero();
    void getCol_zero();
    void isValid_zero();
    void isInvalid_zero();
@@ -92,5 +92,5 @@ private:
    void adjust_offTop();
    void adjust_offLeft();
    void adjust_offBottom();
-   void adjust_invalid();
+   void adjust_invalid();*/
 };

@@ -13,7 +13,7 @@ class PawnTest
 {
 public:
     void run()
-    { 
+    {
         getMoves_blocked();
         getMoves_simple();
         getMoves_initial();
@@ -29,4 +29,4 @@ private:
     void getMoves_capture();
     void getMoves_enpassant();
     void getMoves_promotion();
-}
+};

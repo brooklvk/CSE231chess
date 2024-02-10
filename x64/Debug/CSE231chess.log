@@ -1,14 +1,2 @@
-﻿  testPawn.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\string(23,1): error C2059: syntax error: 'namespace'
-  (compiling source file 'testPawn.cpp')
-  
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\string(23,1): error C2143: syntax error: missing ';' before '{'
-  (compiling source file 'testPawn.cpp')
-  
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\string(23,1): error C2447: '{': missing function header (old-style formal list?)
-  (compiling source file 'testPawn.cpp')
-  
-  piece.cpp
-C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\piece.cpp(278,70): warning C4805: '==': unsafe mix of type 'bool' and type 'int' in operation
-C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\piece.cpp(287,70): warning C4805: '==': unsafe mix of type 'bool' and type 'int' in operation
-  Generating Code...
+﻿  move.cpp
+  CSE231chess.vcxproj -> C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\CSE231chess.exe

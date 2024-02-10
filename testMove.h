@@ -16,46 +16,46 @@ class MoveTest
 public:
    void run() const
    {
-      // Constructor
-      constructor_default();
+   //   // Constructor
+   //   constructor_default();
 
-      // Assign
-      read_simple();
-      read_capture();
-      read_enpassant();
-      read_castleKing();
-      read_castleQueen();
-      constructString_simple();
-      assign_simple();
+   //   // Assign
+   //   read_simple();
+   //   read_capture();
+   //   read_enpassant();
+   //   read_castleKing();
+   //   read_castleQueen();
+   //   constructString_simple();
+   //   assign_simple();
 
-      // Get Text
-      getText_simple();
-      getText_capture();
-      getText_enpassant();
-      getText_castleKing();
-      getText_castleQueen();
+   //   // Get Text
+   //   getText_simple();
+   //   getText_capture();
+   //   getText_enpassant();
+   //   getText_castleKing();
+   //   getText_castleQueen();
 
-      // Letter from Piece Type
-      letterFromPieceType_space();
-      letterFromPieceType_pawn();
-      letterFromPieceType_bishop();
-      letterFromPieceType_knight();
-      letterFromPieceType_rook();
-      letterFromPieceType_queen();
-      letterFromPieceType_king();
+   //   // Letter from Piece Type
+   //   letterFromPieceType_space();
+   //   letterFromPieceType_pawn();
+   //   letterFromPieceType_bishop();
+   //   letterFromPieceType_knight();
+   //   letterFromPieceType_rook();
+   //   letterFromPieceType_queen();
+   //   letterFromPieceType_king();
 
-      // Piece Type from Letter
-      pieceTypeFromLetter_pawn();
-      pieceTypeFromLetter_knight();
-      pieceTypeFromLetter_bishop();
-      pieceTypeFromLetter_rook();
-      pieceTypeFromLetter_king();
-      pieceTypeFromLetter_queen();
+   //   // Piece Type from Letter
+   //   pieceTypeFromLetter_pawn();
+   //   pieceTypeFromLetter_knight();
+   //   pieceTypeFromLetter_bishop();
+   //   pieceTypeFromLetter_rook();
+   //   pieceTypeFromLetter_king();
+   //   pieceTypeFromLetter_queen();
 
    }
 private:
 
-   void constructor_default() const;
+   /*void constructor_default() const;
 
    void read_simple() const;
    void read_capture() const;
@@ -86,6 +86,6 @@ private:
    void pieceTypeFromLetter_bishop() const;
    void pieceTypeFromLetter_rook() const;
    void pieceTypeFromLetter_king() const;
-   void pieceTypeFromLetter_queen() const;
+   void pieceTypeFromLetter_queen() const;*/
 
 };

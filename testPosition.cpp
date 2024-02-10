@@ -167,6 +167,7 @@
 //   assert(pos.location == 33);
 //
 //}  // TEARDOWN
+
 /*************************************
  * GET TEST End
  * End position: slot in the end at h8
@@ -463,7 +464,7 @@
  * 1   0  1  2  3  4  5  6  7   1
  * |                            |
  * +---a--b--c--d--e--f--g--h---+
- **************************************/
+**************************************/
 //void PositionTest::set_both()
 //{
 //   // SETUP
@@ -775,15 +776,15 @@
  **************************************/
 //void PositionTest::adjust_invalid()
 //{
-//   // SETUP
-//   Position pos;
-//   pos.location = -1;
+//	// SETUP
+//	Position pos;
+//	pos.location = -1;
 //
-//   // EXERCISE
-//   pos += ADD_R;
+//	// EXERCISE
+//	pos += ADD_R;
 //
-//   // VERIFY
-//   assert(pos.location == -1);
+//	// VERIFY
+//	assert(pos.location == -1);
 //
-//   // TEARDOWN
+//	// TEARDOWN
 //}

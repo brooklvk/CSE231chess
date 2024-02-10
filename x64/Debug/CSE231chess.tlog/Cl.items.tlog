@@ -1,3 +1,14 @@
-C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\231.01.Ponder.GLDemo\chess.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\231.01.Ponder.GLDemo\x64\Debug\chess.obj
-C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\231.01.Ponder.GLDemo\uiDraw.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\231.01.Ponder.GLDemo\x64\Debug\uiDraw.obj
-C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\231.01.Ponder.GLDemo\uiInteract.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\231.01.Ponder.GLDemo\x64\Debug\uiInteract.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\board.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\board.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\king.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\king.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\main.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\main.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\move.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\move.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\pawn.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\pawn.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\position.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\position.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\testKing.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\testKing.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\testMove.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\testMove.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\testPawn.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\testPawn.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\testPosition.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\testPosition.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\testRunner.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\testRunner.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\uiDraw.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\uiDraw.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\uiInteract.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\uiInteract.obj
+C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\piece.cpp;C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\piece.obj
