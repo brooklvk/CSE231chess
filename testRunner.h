@@ -9,5 +9,5 @@
 class RunTest
 {
 public:
-    void run() {};
+    void run();
 };

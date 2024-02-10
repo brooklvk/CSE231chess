@@ -63,6 +63,10 @@ class Move
             castleQ = true;
       };
 
+      // convert 
+      char letterFromPieceType(PieceType pt) const;
+      PieceType pieceTypeFromLetter(char letter) const;
+
       // for file I/O though only file input is currently implemented
       friend ostream & operator << (ostream & out, Move & rhs);
       friend istream & operator >> (istream & in,  Move & rhs);
@@ -83,8 +87,6 @@ class Move
 
 private:
       void read(const std::string & s);
-      char letterFromPieceType(PieceType pt) const;
-      PieceType pieceTypeFromLetter(char letter) const;
 
       Position  source;    // where the move originated from
       Position  dest;      // where the move finished

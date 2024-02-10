@@ -2,14 +2,14 @@
  * Source File:
  *    Pawn Test : Unit tests for Pawn
  ************************************************************************/
-#include "iostream"
+#include <iostream>
 #include "testPawn.h" // for PAWN_TEST
 #include "board.h"	// for BOARD
 #include <cassert>        // for ASSERT
 #include <set>
+#include <vector>
  // In your header file (e.g., PawnTest.h)
 extern ogstream* pgout;
-
 
 void PawnTest::getMoves_blocked()
 {

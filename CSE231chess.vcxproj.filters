@@ -30,9 +30,6 @@
     <ClCompile Include="board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="chess-OLD.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="king.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -89,9 +86,6 @@
     <ClInclude Include="pieceType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="point-OLD.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="position.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -114,6 +108,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="README.md" />
+    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="enPassant.txt">

@@ -7,7 +7,8 @@
 #include "piece.h"     // for KING
 #include <cassert>    
 #include "board.h" // for ASSERT
-#include "iostream"
+#include <iostream>
+#include <vector>
 using namespace std;
 ogstream* pgout = new ogstream; // Creating an ogstream object (assuming it has a proper constructor)
 

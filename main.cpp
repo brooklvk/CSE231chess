@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include "testRunner.h"
-using namespace::std;
+using namespace std;
 
 int main() {
     RunTest test;

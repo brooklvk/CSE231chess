@@ -10,7 +10,7 @@
 #include "testPawn.h" // for PAWN_TEST
 #include "testKing.h"     // for KING_TEST
 #include <cassert>    
-#include "iostream"// for ASSERT
+#include <iostream>// for ASSERT
 using namespace std;
 
 void RunTest::run()
