@@ -2,20 +2,22 @@
  * Source File:
  *    Pawn Test : Unit tests for Pawn
  ************************************************************************/
-#include <iostream>
+#include "iostream"
 #include "testPawn.h" // for PAWN_TEST
 #include "board.h"	// for BOARD
 #include <cassert>        // for ASSERT
 #include <set>
 #include <vector>
+
  // In your header file (e.g., PawnTest.h)
-extern ogstream* pgout;
+Interface* ui;
+
 
 void PawnTest::getMoves_blocked()
 {
     // SETUP
     bool testB = true;
-    Board board(pgout);
+    Board board(ui);
 
 
     // White pawn at d4, black pawn at d5
@@ -45,7 +47,7 @@ void PawnTest::getMoves_blocked()
 void PawnTest::getMoves_simple()
 {
     //SETUP
-    Board board(pgout);
+    Board board(ui);
 
     //white pawn b4
     Pawn pawn(3, 1, true);
@@ -80,7 +82,7 @@ void PawnTest::getMoves_simple()
 void PawnTest::getMoves_initial()
 {
     //SETUP
-    Board board(pgout);
+    Board board(ui);
 
     //white pawn b2
     Pawn pawn(1, 1, true);
@@ -112,7 +114,7 @@ void PawnTest::getMoves_initial()
 void PawnTest::getMoves_capture()
 {
     //SETUP
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
     //white pawn b6
@@ -155,7 +157,7 @@ void PawnTest::getMoves_capture()
 void PawnTest::getMoves_enpassant()
 {
     //SETUP
-    Board board(pgout);
+    Board board(ui);
 
     //white pawn b5
     Pawn pawn(4, 1, true);
@@ -199,7 +201,7 @@ void PawnTest::getMoves_enpassant()
 void PawnTest::getMoves_promotion()
 {
     //SETUP
-    Board board(pgout);
+    Board board(ui);
 
     //white pawn b7
     Pawn pawn(6, 1, true);
@@ -230,4 +232,5 @@ void PawnTest::getMoves_promotion()
     //    cout << "getMoves_promotion passed" << endl;
 
 }
+
 

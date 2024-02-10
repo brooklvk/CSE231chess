@@ -5,20 +5,20 @@
 
 #include "testKing.h" // for KING_TEST
 #include "piece.h"     // for KING
-#include <cassert>    
-#include "board.h" // for ASSERT
+#include <cassert>    // for ASSERT
+#include "board.h" 
 #include <iostream>
 #include <vector>
 using namespace std;
-ogstream* pgout = new ogstream; // Creating an ogstream object (assuming it has a proper constructor)
+extern Interface* ui;
 
 void KingTest::getMoves_free() {
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
     //white king e5
     King king(4, 4, true); // e5
-    board[king.getPosition()] = king;
+    board.assign(king, king.getPosition());
 
     //EXERCISE
     set<Move> moves = king.getMoves(board);
@@ -39,7 +39,7 @@ void KingTest::getMoves_free() {
     board.reset();
 };
 void KingTest::getMoves_blocked() {
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
 
@@ -85,7 +85,7 @@ void KingTest::getMoves_blocked() {
 
 
 void KingTest::getMoves_capture() {
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
 
@@ -138,7 +138,7 @@ void KingTest::getMoves_capture() {
 }
 
 void KingTest::getMoves_castle_king_moved() {
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
     // White king at e1
@@ -189,7 +189,7 @@ void KingTest::getMoves_castle_king_moved() {
 
 
 void KingTest::getMoves_castle_rook_moved() {
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
     // White king at e1
@@ -239,7 +239,7 @@ void KingTest::getMoves_castle_rook_moved() {
 
 
 void KingTest::getMoves_castle_blocked() {
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
     // White king at e1
@@ -295,7 +295,7 @@ void KingTest::getMoves_castle_blocked() {
 
 
 void KingTest::getMoves_castle() {
-    Board board(pgout);
+    Board board(ui);
     board.testBoard();
 
     // White king at e1
@@ -323,7 +323,7 @@ void KingTest::getMoves_castle() {
     set<Move> moves = king.getMoves(board);
 
     // VERIFY
-    vector<string> expectedMoves = { "e1c1c", "e1d1", "e1f1", "e1g1C" };
+    vector<string> expectedMoves = { "e1c1C", "e1d1", "e1f1", "e1g1c" };
 
     assert(moves.size() == expectedMoves.size());
 

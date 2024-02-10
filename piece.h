@@ -1,5 +1,4 @@
 #pragma once
-
 #include "position.h"
 #include "move.h"
 #include <set>
@@ -57,7 +56,7 @@ protected:
 };
 class Space : public Piece {
 public:
-    Space(int r, int c) : Piece(r, c, false) {}
+    Space(int r, int c) : Piece(r, c, NULL) {}
     char getLetter() const { return ' '; }
     set<Move> getMoves(const Board& board) const;
     virtual void display(ogstream* pgout) const

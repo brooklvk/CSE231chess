@@ -22,34 +22,36 @@ set<Move> Piece::getMovesSlide(const Board& board, const Delta deltas[], int num
     for (int i = 0; i < numDelta; ++i) {
         int newRow = position.getRow() + deltas[i].dRow;
         int newCol = position.getCol() + deltas[i].dCol;
-        Position dest(position);
-        dest.set(newRow, newCol);
+        Position dest(newRow, newCol);
 
-        while (Position(newRow, newCol).isValid()) {
+        while (dest.isValid()) {
             // Check if the destination position is occupied by a piece of the same color
-            if (board[dest].isWhite() == fWhite) {
+            if (board[dest].isWhite() == fWhite && board[dest].getLetter() != ' ') {
                 break;  // Can't move through or capture own piece
             }
 
             Move move;  // Use default constructor
             move.setSrc(Position(position));  // Set source position
             move.setDes(dest);  // Set destination position
+            if (board[dest].isWhite() != isWhite() && board[dest].getLetter() != ' ') {
+                move.setCapture(move.pieceTypeFromLetter(board[dest].getLetter()));
+            }
             moves.insert(move);
 
             // If the destination position is occupied by an opponent's piece, stop sliding
-            if (board[dest].isWhite() != fWhite) {
+            if (board[dest].getLetter() != ' ') {
                 break;
             }
 
             // Move to the next position in the specified direction
             newRow += deltas[i].dRow;
             newCol += deltas[i].dCol;
+            dest.set(newRow, newCol);  // Update the destination position
         }
     }
 
     return moves;
 }
-
 
 
 
@@ -64,17 +66,16 @@ set<Move> Piece::getMovesNoslide(const Board& board, const Delta deltas[], int n
 
         if (dest.isValid()) {
             // Check if the destination position is occupied by a piece of the same color
-            if (board[dest].isWhite() == isWhite()) {
-                continue;  // Can't move to a position occupied by own piece
+            if (board[dest].isWhite() != fWhite || board[dest].getLetter() == ' ') {
+                // Can't move through or capture own piece
+                Move move;  // Use default constructor
+                move.setSrc(Position(position));  // Set source position
+                move.setDes(dest);  // Set destination position
+                if (board[dest].isWhite() == !isWhite() && board[dest].getLetter() != ' ') {
+                    move.setCapture(move.pieceTypeFromLetter(board[dest].getLetter()));
+                }
+                moves.insert(move);
             }
-
-            Move move;  // Use default constructor
-            move.setSrc(Position(position));  // Set source position
-            move.setDes(dest);  // Set destination position
-            if (board[dest].isWhite() == !isWhite() && board[dest].getLetter() != ' ') {
-                move.setCapture(move.pieceTypeFromLetter(board[dest].getLetter()));
-            }
-            moves.insert(move);
 
         }
 
@@ -205,7 +206,7 @@ set<Move> King::getMoves(const Board& board) const {
                     Move move;
                     move.setSrc(position);
                     move.setDes({ row, (position.getCol() + (target.getCol() > position.getCol() ? 2 : -2)) });
-                    move.setCastle(i == row);
+                    move.setCastle(i != 0);
                     moves.insert(move);
                 }
             }
@@ -267,26 +268,19 @@ set<Move> Pawn::getMoves(const Board& board) const {
         Position posCapture(getPosition().getRow() + forwardDirection, getPosition().getCol() + cDelta[i]);
         if (posCapture.isValid() && board[posCapture].isWhite() == !isWhite() && board[posCapture].getLetter() != ' ')
             addMove(posCapture);
+
+        // En Passant
+        Position posEnPassant(getPosition().getRow() + forwardDirection, getPosition().getCol() + cDelta[i]);
+        Position posKill(getPosition().getRow(), getPosition().getCol() + cDelta[i]);
+        if (posEnPassant.isValid() && board[posEnPassant].getLetter() == ' ' &&
+            board[posKill].isWhite() != isWhite() &&
+            board[posKill].getNMoves() == 1 &&
+            board[posKill].justMoved(board.getCurrentMove())) {
+            addMove(posEnPassant, false, true);
+        }
     }
 
-    // En Passant
-    Position posEnPassant(getPosition().getRow() + forwardDirection, getPosition().getCol() + 1);
-    Position posKill(getPosition().getRow(), getPosition().getCol() + 1);
-    if (posEnPassant.isValid() && board[posEnPassant].getLetter() == ' ' &&
-        board[posKill].isWhite() != isWhite() &&
-        board[posKill].getNMoves() == 1 &&
-        justMoved(board.getCurrentMove()) == board[posKill].getNMoves()) {
-        addMove(posEnPassant, false, true);
-    }
 
-    posEnPassant.set(getPosition().getRow() + forwardDirection, getPosition().getCol() - 1);
-    posKill.set(getPosition().getRow(), getPosition().getCol() - 1);
-    if (posEnPassant.isValid() && board[posEnPassant].getLetter() == ' ' &&
-        board[posKill].isWhite() != isWhite() &&
-        board[posKill].getNMoves() == 1 &&
-        justMoved(board.getCurrentMove()) == board[posKill].getNMoves()) {
-        addMove(posEnPassant, false, true);
-    }
 
     return moves;
 }
@@ -299,3 +293,5 @@ void Pawn::addPromotion(set<Move>& moves, Move& move) const {
     moves.insert(move);
     return;
 }
+
+

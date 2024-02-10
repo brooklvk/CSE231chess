@@ -4,10 +4,12 @@
 #include "position.h"   // for POSITION: how we locate pieces
 #include "move.h"       // for MOVE: how we move pieces around
 #include "piece.h"      // for PIECE: what the board consists of
+#include "uiInteract.h"
 
 // Forward declarations
 
 class Move;
+
 
 class Board
 {
@@ -17,8 +19,8 @@ public:
     friend class testBoard;
 
     // Constructor & Destructor
-    Board(ogstream* pgout, bool noReset = false) : currentMove(-1), pgout(pgout)
-    {
+    Board(Interface* pUi, bool noReset = false) : currentMove(-1) {
+        pgout = new ogstream;
         if (!noReset)
             reset(false /*fFree*/);
     }
