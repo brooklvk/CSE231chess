@@ -1,11 +1,2 @@
-﻿  main.cpp
-C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\main.cpp(100,7): error C2664: 'void Interface::run(void (__cdecl *)(Interface *,void *),void *)': cannot convert argument 1 from 'Board *(__cdecl *)(Interface *,Board *)' to 'void (__cdecl *)(Interface *,void *)'
-  C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\main.cpp(100,12):
-  None of the functions with this name in scope match the target type
-  C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\uiInteract.h(36,9):
-  see declaration of 'Interface::run'
-  C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\main.cpp(100,7):
-  while trying to match the argument list '(overloaded-function, Board *)'
-  
-  testRunner.cpp
-  Generating Code...
+﻿  testPosition.cpp
+  CSE231chess.vcxproj -> C:\Users\Brooklyn\Documents\WINTER24\CSE231 Inheritance Design\CSE231chess\x64\Debug\CSE231chess.exe
