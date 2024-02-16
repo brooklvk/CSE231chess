@@ -119,9 +119,9 @@ public:
     Pawn(int r, int c, bool iswhite) : Piece(r, c, iswhite) {}
     char getLetter() const { return 'p'; }
     set<Move> getMoves(const Board& board) const;
-    virtual void display(ogstream* gout) const
+    virtual void display(ogstream* pgout) const
     {
-        gout->drawPawn(position.getLocation(), !isWhite());
+        pgout->drawPawn(position.getLocation(), !isWhite());
     }
 private:
     void addPromotion(set <Move>& moves, Move& move) const;

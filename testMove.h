@@ -50,9 +50,8 @@ public:
         pieceTypeFromLetter_knight();
         pieceTypeFromLetter_bishop();
         pieceTypeFromLetter_rook();
-        pieceTypeFromLetter_king();
         pieceTypeFromLetter_queen();
-
+        pieceTypeFromLetter_king();
     }
 private:
 

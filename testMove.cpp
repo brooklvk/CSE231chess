@@ -525,7 +525,7 @@ void MoveTest::letterFromPieceType_king() const
  * PIECE TYPE FROM LETTER
  **************************************/
 
-void MoveTest::pieceTypeFromLetter_pawn() const
+void MoveTest::pieceTypeFromLetter_pawn() const 
 {  // SETUP
 	Move move;
 	move.source = Position(7, 7);

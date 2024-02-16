@@ -276,7 +276,7 @@ void KingTest::getMoves_castle_blocked() {
     // VERIFY
     vector<string> expectedMoves = { "e1d1", "e1f1" };
 
-    //    assert(moves.size() == expectedMoves.size());
+    assert(moves.size() == expectedMoves.size());
 
     auto it = moves.begin();
     auto expectedIt = expectedMoves.begin();

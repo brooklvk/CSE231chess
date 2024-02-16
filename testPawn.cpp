@@ -2,12 +2,14 @@
  * Source File:
  *    Pawn Test : Unit tests for Pawn
  ************************************************************************/
-#include "iostream"
+#include <iostream>
 #include "testPawn.h" // for PAWN_TEST
 #include "board.h"	// for BOARD
 #include <cassert>        // for ASSERT
 #include <set>
 #include <vector>
+#include <string>
+using namespace std;
 
  // In your header file (e.g., PawnTest.h)
 Interface* ui;
@@ -58,14 +60,14 @@ void PawnTest::getMoves_simple()
 
     // VERIFY
 
-    vector<string> expectedMoves = { "b4b5" };
+    set<Move> expectedMoves = {"b4b5"};
 
     auto it = moves.begin();
     auto expectedIt = expectedMoves.begin();
 
     while (it != moves.end()) {
-        //        cout << it->getText() << " || " << *expectedIt << endl;
-        assert(it->getText() == *expectedIt);
+                //cout << expectedIt->getText() << " || " << endl;
+        assert(it->getText() == expectedIt->getText());
         ++it;
         ++expectedIt;
     }
@@ -91,7 +93,7 @@ void PawnTest::getMoves_initial()
 
     //EXERCISE
     set<Move> moves = pawn.getMoves(board);
-    vector<string> expectedMoves = { "b2b3","b2b4" };
+    set<Move> expectedMoves = { "b2b3","b2b4" };
 
     //VERIFY
     auto it = moves.begin();
@@ -99,7 +101,7 @@ void PawnTest::getMoves_initial()
 
     while (it != moves.end()) {
         //        cout << it->getText() << " || " << *expectedIt << endl;
-        assert(it->getText() == *expectedIt);
+        assert(it->getText() == expectedIt->getText());
         ++it;
         ++expectedIt;
     }
@@ -134,19 +136,19 @@ void PawnTest::getMoves_capture()
 
     //EXERCISE
     set<Move> moves = pawn.getMoves(board);
-    vector<string> expectedMoves = { "b6a7p", "b6c7p" };
+    set<Move> expectedMoves = { "b6a7p", "b6c7p" };
 
     auto it = moves.begin();
     auto expectedIt = expectedMoves.begin();
 
     while (it != moves.end()) {
         //        cout << it->getText() << " || " << *expectedIt << endl;
-        assert(it->getText() == *expectedIt);
+        assert(it->getText() == expectedIt->getText());
         ++it;
         ++expectedIt;
     }
     //VERIFY
-//	assert(stringMoves == {"b6a7p","b6c7p"});
+	assert(moves == expectedMoves);
 
     //TEARDOWN
     board.reset();
@@ -178,19 +180,19 @@ void PawnTest::getMoves_enpassant()
     board[pawn4.getPosition()].setNMoves(1);
     //EXERCISE
     set<Move> moves = pawn.getMoves(board);
-    vector<string> expectedMoves = { "b5a6E", "b5c6E" };
+    set<Move> expectedMoves = { "b5a6E", "b5c6E" };
 
     auto it = moves.begin();
     auto expectedIt = expectedMoves.begin();
 
     while (it != moves.end()) {
         //        cout << it->getText() << " || " << *expectedIt << endl;
-        assert(it->getText() == *expectedIt);
+        assert(it->getText() == expectedIt->getText());
         ++it;
         ++expectedIt;
     }
     //VERIFY
-//	assert(moves == {"b5c6E","b5a6E"});
+	assert(moves == expectedMoves);
 
     //TEARDOWN
     board.reset();
@@ -212,25 +214,23 @@ void PawnTest::getMoves_promotion()
     board.assign(space, { 7, 2 });
     //EXERCISE
     set<Move> moves = pawn.getMoves(board);
-    vector<string> expectedMoves = { "b7b8Q" };
+    set<Move> expectedMoves = { "b7b8Q" }; 
 
     auto it = moves.begin();
     auto expectedIt = expectedMoves.begin();
 
     while (it != moves.end()) {
-        //        cout << it->getText() << " || " << *expectedIt << endl;
-        assert(it->getText() == *expectedIt);
+                //cout << it->getText() << " || " << *expectedIt << endl;
+        assert(it->getText() == expectedIt->getText());
         ++it;
         ++expectedIt;
     }
     assert(moves.size() == expectedMoves.size());
     //VERIFY
-//	assert(moves == {"b7b8Q"});
+	assert(moves == expectedMoves); 
 
     //TEARDOWN
     board.reset();
     //    cout << "getMoves_promotion passed" << endl;
 
 }
-
-

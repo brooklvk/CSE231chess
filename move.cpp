@@ -115,11 +115,12 @@ PieceType Move::pieceTypeFromLetter(char letter) const
          return KNIGHT;
       case 'p':
          return PAWN;
+      case ' ':
+          return SPACE;
    }
    assert(false);
    return SPACE;
 }
-
 
 /***********************************************
  * MOVE : GET TEXT
